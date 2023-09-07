@@ -121,7 +121,7 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String,String>> someJobs) {
 
-        if (someJobs.size() > 0 ) {
+        if (!someJobs.isEmpty()) {
             // Loop over all of the keys in the hashmap
             //System.out.println(someJobs);
             for (HashMap<String, String> field : someJobs) {
