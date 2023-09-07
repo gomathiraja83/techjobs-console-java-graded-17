@@ -39,7 +39,7 @@ public class TechJobs {
                 String columnChoice = getUserSelection("List", columnChoices);
 
                 if (columnChoice.equals("all")) {
-                    printJobs(JobData.findAll());
+                      printJobs(JobData.findAll());
                 } else {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
@@ -63,7 +63,8 @@ public class TechJobs {
 
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
-                } else {
+                }
+                else {
                     printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
                 }
             }
@@ -122,17 +123,18 @@ public class TechJobs {
 
         if (someJobs.size() > 0 ) {
             // Loop over all of the keys in the hashmap
-
+            //System.out.println(someJobs);
             for (HashMap<String, String> field : someJobs) {
-                System.out.println("*****");
+                System.out.println("\n*****");
                 for(Map.Entry<String, String> data: field.entrySet()){
                     System.out.println(data.getKey() + ": "+data.getValue() );
 
                 }
-                System.out.println("*****\n\n");
+                System.out.println("*****");
+
             }
 
-        } else System.out.println("No Results");
+        } else System.out.print("No Results");
     }
 
 }
